@@ -1,4 +1,5 @@
 # imag_numbers
-The file with class contains all possible actions with complex numbers.
-The file with Main realizes them.
+The "Imag" contains all possible actions with complex numbers.
+The "ImagPatterns" chooses necessary actions.
+The "ImagMain" realizes them.
 Good luck!

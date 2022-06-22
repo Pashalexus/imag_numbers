@@ -33,10 +33,10 @@ public class Imag {
         d.re /= e.re;
         d.im /= e.re;
     }
-    public static void mod(Imag a){ // модуль числа (в разработке)
+    public static void mod(Imag a) { // модуль числа (в разработке)
         a.mod = Math.sqrt(a.re * a.re + a.im * a.im);
     }
-    public static void arg(Imag a){ // аргумент числа (в разработке)
+    public static void arg(Imag a){ // аргумент числа
         if (a.re != 0) {
             a.arg = Math.atan(a.im / a.re);
         }
@@ -57,11 +57,18 @@ public class Imag {
         }
     }
     public static void print(Imag a){ // печать комплексного числа
-        if (a.im >= 0){
-            System.out.print(a.re + "+" + a.im + "i");
+        if (a.re != 0){
+            System.out.printf("%.3f",a.re);
         }
-        if (a.im < 0){
-            System.out.print(a.re + "" + a.im + "i");
+        if (a.im > 0 && a.re != 0){
+            System.out.print("+");
+        }
+        if (a.im != 0){
+            System.out.printf("%.3f",a.im);
+            System.out.print("i");
+        }
+        if (a.im == 0 && a.re == 0){
+            System.out.print("0");
         }
     }
 }
